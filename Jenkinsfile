@@ -7,6 +7,18 @@ pipeline {
           git branch: 'main', url: 'https://github.com/keeley-bootcamp/lbg-vat-calculator.git'
         }
     }
+    stage('Install') {
+        steps {
+            // install react dependencies
+            sh "npm install"
+        }
+    }
+    stage('Test') {
+        steps {
+            // run react tests
+            sh "npm test"
+        }
+    }
     stage('SonarQube Analysis') {
       environment {
         scannerHome = tool 'sonarqube'
