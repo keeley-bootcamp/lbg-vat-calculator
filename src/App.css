@@ -4,10 +4,11 @@
 }
 
 .colour-border{
-  border: 3px red;
+  border: 3px solid red;
   padding: 10px;
 }
 
 .header{
   padding: 10px;
+  background-color: pink;
 }
